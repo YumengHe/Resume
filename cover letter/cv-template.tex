@@ -1,0 +1,189 @@
+%-------------------------
+% Cover Letter in Latex
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0pt}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{\MakeUppercase}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabularx}{\textwidth}[t]{X r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabularx}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabularx}{\textwidth}{X r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabularx}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabularx}{\textwidth}[t]{X r}
+        \textbf{#1} & #2 \\
+    \end{tabularx}\vspace{-7pt}
+}
+
+% \newcommand{\resumeProjectHeading}[2]{
+%     \item
+%     \begin{tabularx}{\textwidth}[t]{X r}
+%         \small\textbf{#1} & \small#2 \\
+%     \end{tabularx}\vspace{-7pt}
+% }
+
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Yumeng He} \\ \vspace{1pt}
+    \small 213-783-4223 $|$ \href{mailto:heyumeng@usc.edu}{\underline{heyumeng0928@gmail.com}} $|$ 
+    \href{https://www.heyumeng.com} 
+    {\underline{www.heyumeng.com}}
+\end{center}
+
+
+\rule{\linewidth}{0.7pt}
+
+%----------------------------------------------------------------------------------------
+%	MY NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\null\hfill
+\begin{tabular}{r @{}}
+	Yumeng He \\
+	1173 W 37th Pl \\ % Address
+	Los Angeles, CA 90007 \\
+  heyumeng0928@gmail.com \\
+	(213) 783-4223
+
+\end{tabular}
+
+%----------------------------------------------------------------------------------------
+%	ADDRESSEE AND GREETING
+%----------------------------------------------------------------------------------------
+
+\begin{tabular}{@{} l}
+  \today \bigskip\\ % Date
+	Hiring Manager \\
+	Samsung \\
+  665 Clyde Avenue \\
+  Mountain View, CA
+\end{tabular}
+
+\bigskip % Vertical whitespace
+
+Dear Hiring Manager,
+
+\bigskip % Vertical whitespace
+
+%----------------------------------------------------------------------------------------
+%	LETTER CONTENT
+%----------------------------------------------------------------------------------------
+
+I am writing to apply for the 2025 Summer Intern, XR Graphics Developer position at Samsung.
+I am currently pursuing a Master’s degree in Computer Science at USC, where my academic and project work in computer graphics have fueled my interest in XR development.
+I am eager to bring my technical expertise, problem-solving skills, and enthusiasm for cutting-edge graphics technology to your team.
+
+\bigskip
+
+My coursework has provided a strong foundation in 3D graphics, and I have completed multiple OpenGL projects that sharpened my proficiency in C++.
+If you would like to learn more about my work, please feel free to visit my personal webpage at \underbar{https://heyumeng.com}.
+During my undergraduate studies at the University of Toronto, I double-majored in Mathematics and Computer Science, which gave me a solid theoretical background.
+I also participated in a one-year co-op program, gaining valuable internship experience that honed my debugging skills and ability to troubleshoot complex issues.
+
+\bigskip
+
+I would welcome the opportunity to discuss how my background, technical skills, and passion for XR graphics can contribute to Samsung’s projects.
+Thank you for considering my application. I look forward to the possibility of joining your team and helping advance the next generation of immersive technologies.
+
+\bigskip
+
+Sincerely,
+
+\vspace{50pt}
+
+Yumeng He
+
+\end{document}
