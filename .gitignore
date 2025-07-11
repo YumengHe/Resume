@@ -1,0 +1,4 @@
+# Ignore all files in the computer_graphics directory
+computer_graphics/*
+# except for the tex file
+!computer_graphics/resume-cg.tex
