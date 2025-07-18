@@ -97,7 +97,6 @@
 %     \end{tabularx}\vspace{-7pt}
 % }
 
-
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
@@ -121,7 +120,7 @@
 
 \begin{center}
     \textbf{\Huge \scshape Yumeng He} \\ \vspace{1pt}
-    \small 213-783-4223 $|$ \href{mailto:heyumeng@usc.edu}{\underline{heyumeng0928@gmail.com}} $|$ 
+    \small 213-783-4223 $|$ \href{mailto:heyumeng0928@gmail.com}{\underline{heyumeng0928@gmail.com}} $|$ 
     \href{https://www.heyumeng.com} 
     {\underline{www.heyumeng.com}}
 \end{center}
@@ -131,88 +130,124 @@
 My research interests lie in computer graphics and vision especially in 
 physics-based animation, 
 differentiable simulation, 
-LLM-guided 3D scene synthesis 
-and 3DGS.
+geometry processing,
+rendering,
+and 3D Gaussian Splatting.
 
 %-----------EDUCATION-----------
 \section{Education}
   \resumeSubHeadingListStart
     \resumeSubheading
       {University of Southern California}{Aug 2024 -- May 2026}
-      {Master of Science in Computer Science}{Los Angeles, CA, USA}
+      {Master of Science}{Los Angeles, CA, USA}
       \resumeItemListStart
         \resumeItem{Cumulative GPA: 3.83/4.0}
+        \resumeItem{Computer Science major}
         \resumeItem{Selected Coursework: Computer Graphics, Computer Animation and Simulation, 3D Graphics and Rendering}
       \resumeItemListEnd
     \resumeSubheading
       {University of Toronto}{Sep 2019 -- May 2024}
-      {Honours Bachelor of Science degree with High Distinction}{Toronto, ON, Canada}
+      {Honours Bachelor of Science with High Distinction}{Toronto, ON, Canada}
       \resumeItemListStart
         \resumeItem{Cumulative GPA: 3.71/4.0}
         \resumeItem{Computer Science and Mathematics double major}
-        \resumeItem{Dean’s List (top 10 \%) — 2020 Summer, 2021 Winter, 2023 Summer, 2024 Winter}
+        % \resumeItem{Dean’s List (top 10 \%) — 2020 Summer, 2021 Winter, 2023 Summer, 2024 Winter}
         \resumeItem{Selected Coursework: Calculus I \& II, Linear Algebra I \& II, Ordinary Differential Equations, Abstract Mathematics, Complex Variables, Number Theory, Machine Learning, Artificial Intelligence}
       \resumeItemListEnd
   \resumeSubHeadingListEnd
 
 %-----------Research Experience-----------
 \section{Research Experience}
-	\resumeSubHeadingListStart
-    \resumeSubheading
-      {AIVC Lab Visiting Student $|$ \normalfont full-time}{July 2025 – present}
-      {Supervisor: Prof. Chenfanfu Jiang}{Los Angeles, CA, USA}
-      \resumeItemListStart
-        \resumeItem{Conducting research on interactive 3D scene-layout synthesis, investigating physics-aware placement and hierarchical generation strategies.}
-        \resumeItem{Designing a novel LLM-guided pipeline that fuses large mesh databases with differentiable physics to automate scene assembly.}
-        \resumeItem{Prototype under active development.}
-        \resumeItemListEnd
-    \resumeSubHeadingListEnd
+
+\resumeSubHeadingListStart
+  \resumeSubheading
+  {UCLA AIVC Lab Visiting Student $|$ \normalfont Full-time}{June 2025 – present}
+  {Supervisor: Prof. Chenfanfu Jiang}{Los Angeles, CA, USA}
+  \resumeItemListStart
+    \resumeItem{Conducting full-time research on 3D articulated object generation, with a focus on neural representations of shape and joint dynamics for physically plausible synthesis}
+    \resumeItem{Exploring physics-aware scene layout and hierarchical composition, combining structural priors with simulation constraints to guide object placement}
+    \resumeItem{Preparing a first-author submission to CVPR 2026, presenting a unified framework for articulated object synthesis guided by both data-driven learning and physical consistency}
+  \resumeItemListEnd
+
+  % \resumeSubheading
+  % {Undergraduate Research Assistant $|$ \normalfont full-time}{May 2023 - August 2023}
+  % {Supervisor: Prof. Guangzhu Chen}{Remote}
+  % \resumeItemListStart
+  %   \resumeItem{Proposed SS-Dualflow strategy to incorporate features from both normal and artificially generated abnormal samples into the Deep Learning Dual-Layer 2D Normalizing Flow network (Dualflow). }
+  %   \resumeItem{Mapped features generated from the network to a Gaussian distribution, reducing information loss in the mapping process and bolstering the network’s capacity to comprehend common features in normal regions. }
+  %   \resumeItem{Integration of the Exponential Space Attention Module into the inner subnetwork of Dualflow enabled the network to prioritize and distinguish anomalous features more effectively.}
+  %   \resumeItem{The extended experimental outcomes on the MVTec AD dataset showcased an average image-level AUC of 99.38\% and an average pixel-level AUC of 98.38\%, demonstrating the approach's effectiveness.}
+  % \resumeItemListEnd
+\resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
 \section{Relevant Projects}
-	\resumeSubHeadingListStart
-		% Fluid Simulation
-    \resumeProjectHeading {\textbf{Incompressible Fluid Simulation: A Comparison} $|$ \normalfont C++, OpenGL}{Spring 2025}
-			\resumeItemListStart
-				\resumeItem{Implemented and benchmarked five 2D incompressible fluid solvers—Stable Fluids, SPH, PIC, FLIP, APIC—on identical scenarios, reporting performance-vs-accuracy trade-offs.}
-				\resumeItemListEnd
-		
-		% Collision Detection
-		\resumeProjectHeading {\textbf{Collision detection with penalty method and IPC} $|$ \normalfont C++}{Spring 2025}
-		\resumeItemListStart
-				\resumeItem{Simulated a jello cube using a 3D mass-spring system.}
-				\resumeItem{Modeled a network of Structural, Shear, and Bend springs to capture deformation behavior.}
-				\resumeItem{Applied the penalty method for collision detection against boundaries and obstacles.}
-				\resumeItem{Integrated line-search IPC; achieved 0 penetration ($>1e-4$ relative gap) across 1k-step self-collision test.}
-		\resumeItemListEnd
-		\resumeProjectHeading {\textbf{Ray Tracing} $|$ \normalfont C++}{Fall 2024}
-        \resumeItemListStart
-            \resumeItem{Developed a robust ray tracer in C++ capable of rendering both triangles and spheres using Phong shading, shadow rays, and recursive reflections for mirror-like surfaces.}
-            \resumeItem{Implemented supersampling antialiasing, soft shadows from area lights, and the Moeller–Trumbore algorithm for efficient ray–triangle intersections, enhancing visual realism and performance.}
-        \resumeItemListEnd
-        
-    \resumeProjectHeading
-        {\textbf{Simulating a Roller Coaster} $|$ \normalfont OpenGL}{Fall 2024}
-        \resumeItemListStart
-            \resumeItem{Implemented first-person roller-coaster simulator using Catmull-Rom splines for track \& Frenet frame for camera.}
-            \resumeItem{Multi-pass OpenGL pipeline reaches 120 FPS at 1080p; added user speed control \& auto-screenshot}
-        \resumeItemListEnd
-		
-		% Height Fields Using Shaders
-		\resumeProjectHeading
-				{\textbf{Height Fields Using Shaders} $|$ \normalfont OpenGL}{Fall 2024}
-				\resumeItemListStart
-						\resumeItem{Built an interactive OpenGL pipeline with vertex and fragment shaders to generate real-time 3D terrain from heightmaps, supporting multiple rendering modes (points, lines, wireframe, smoothed surfaces).}
-						\resumeItem{Integrated dynamic coloring, transformation/zoom controls, and automated screenshots/rotation features for an immersive, high-performance visualization experience.}
-				\resumeItemListEnd
+\resumeSubHeadingListStart
+  % Fluid Simulation
+  \resumeProjectHeading {\textbf{Incompressible Fluid Simulation: A Comparison} $|$ \normalfont C++, OpenGL}{Spring 2025}
+  \resumeItemListStart
+    \resumeItem{Designed and implemented four 2D incompressible fluid solvers—Stable Fluids, SPH, PIC, and APIC—from scratch in C++ with OpenGL-based real-time visualization}
+    \resumeItem{Ran controlled experiments on identical test scenarios to evaluate visual accuracy, physical stability, and runtime performance}
+    \resumeItem{Identified trade-offs between solver fidelity and speed; APIC achieved the most stable and detailed flows, while Stable Fluids offered the fastest performance with noticeable dissipation}
+  \resumeItemListEnd
+  
+  % Collision Detection
+  \resumeProjectHeading {\textbf{Collision Detection with Penalty Method and IPC} $|$ \normalfont C++}{Spring 2025}
+  \resumeItemListStart
+      \resumeItem{Built a physically accurate 3D jello cube simulator using a mass-spring system with structural, shear, and bend springs to model real-world deformation under force}
+      \resumeItem{Implemented penalty-based collision detection to handle interactions with static obstacles—including inclined planes and spheres—ensuring realistic response under contact}
+      \resumeItem{Upgraded basic collision logic with Incremental Potential Contact (IPC), reducing interpenetration to below $1e - 4$ relative gap across $1,000+$ simulation steps, effectively achieving zero visible penetration and stable behavior}
+  \resumeItemListEnd
+
+  % Inverse Kinematics with Skinning
+  \resumeProjectHeading {\textbf{Inverse Kinematics with Skinning} $|$ \normalfont C++}{Spring 2025}
+  \resumeItemListStart
+      \resumeItem{Implemented Linear Blend Skinning and Dual Quaternion Skinning to deform 3D characters with smooth and realistic joint articulation}
+      \resumeItem{Built a full FK–IK pipeline, supporting both forward kinematics for pose propagation and inverse kinematics for pose estimation under joint constraints}
+      \resumeItem{Developed multiple IK solvers, including the pseudoinverse method (least squares) and Tikhonov regularization (damped least squares) to improve stability}
+  \resumeItemListEnd
+
+  % Motion Capture Interpolation
+  \resumeProjectHeading {\textbf{Motion Capture Interpolation} $|$ \normalfont C++}{Spring 2025}
+  \resumeItemListStart
+      \resumeItem{Implemented four interpolation schemes to reconstruct and smooth human motion sequences captured via optical motion capture}
+      \resumeItem{Supported both Euler angles and quaternions for representing joint rotations, enabling robust handling of gimbal lock and interpolation artifacts}
+      \resumeItem{Applied linear and Bezier interpolation across keyframes to generate natural, continuous transitions in high-dimensional skeletal animation}
+  \resumeItemListEnd
+
+  % Ray Tracing
+  \resumeProjectHeading {\textbf{Ray Tracing} $|$ \normalfont C++, Rendering}{Fall 2024}
+      \resumeItemListStart
+          \resumeItem{Built a modular ray tracer in C++ supporting both triangle meshes and spheres, featuring Phong shading, shadow rays, and recursive reflections for realistic mirror effects}
+          \resumeItem{Integrated supersampling antialiasing, soft shadows via area lights, and the Moller–Trumbore algorithm for fast ray–triangle intersections}
+          \resumeItem{Achieved visually convincing renders with enhanced realism and performance, balancing image quality and computational cost across complex scenes}
+      \resumeItemListEnd
+  
+  % Roller Coaster
+  \resumeProjectHeading
+      {\textbf{Simulating a Roller Coaster} $|$ \normalfont OpenGL, Rendering}{Fall 2024}
+      \resumeItemListStart
+          \resumeItem{Built a first-person roller coaster simulator using Catmull–Rom splines for smooth track generation and the Frenet frame for real-time camera orientation}
+          \resumeItem{Engineered a multi-pass OpenGL rendering pipeline sustaining 120 FPS at 1080p, with realistic motion and responsive controls}
+          \resumeItem{Added interactive features including user-controlled speed, auto-screenshot capture, and seamless on-rail camera transitions}
+      \resumeItemListEnd
+  
+  % Height Fields Using Shaders
+  \resumeProjectHeading
+      {\textbf{Height Fields Using Shaders} $|$ \normalfont OpenGL, Rendering}{Fall 2024}
+      \resumeItemListStart
+          \resumeItem{Developed a real-time 3D terrain visualization system using vertex and fragment shaders, rendering heightmaps with support for multiple modes: point cloud, line mesh, wireframe, and smooth shading}
+          \resumeItem{Built a modular OpenGL pipeline with interactive controls for camera movement, zooming, rotation, and automated screenshot capture}
+          \resumeItem{Integrated dynamic surface coloring based on elevation and lighting, enabling an immersive, high-performance terrain exploration experience}
+      \resumeItemListEnd
     
-		% Petpal
-    \resumeProjectHeading
-        {\textbf{Petpal} $|$ \normalfont Full-Stack}{Fall 2023}
-        \resumeItemListStart
-            \resumeItem{Led a four-person team to build a Python-based adoption platform with Django REST Framework, integrating MySQL for real-time data handling and advanced search filters.}
-            \resumeItem{Implemented a responsive front end (HTML, CSS, JavaScript) and secure authentication to streamline the pet adoption process for seekers and shelters.}
-    \resumeItemListEnd
+  % Petpal
+  % \resumeProjectHeading
+  %     {\textbf{Petpal} $|$ \normalfont Full-Stack}{Fall 2023}
+  %     \resumeItemListStart
+  %         \resumeItem{Led a four-person team to build a Python-based adoption platform with Django REST Framework, integrating MySQL for real-time data handling and advanced search filters}
+  %         \resumeItem{Implemented a responsive front end (HTML, CSS, JavaScript) and secure authentication to streamline the pet adoption process for seekers and shelters}
+  % \resumeItemListEnd
     
 \resumeSubHeadingListEnd
 
@@ -220,29 +255,60 @@ and 3DGS.
 \section{Work Experience}
 	\resumeSubHeadingListStart
     \resumeSubheading
-      {Software Developer Intern $|$ \normalfont full-time}{Aug 2022 – Aug 2023}
-      {HCL Canada Inc.}{Toronto, ON, Canada}
-      \resumeItemListStart
-        \resumeItem{Utilized Jenkins to automate build and deployment processes and updated existing company code to address technical debt, significantly accelerating production releases and reducing human error.}
-        \resumeItem{Containerized micro-services for x86\_64 (xLinux) and IBM PowerPC (pLinux), enabling architecture-agnostic builds, ensuring consistent and scalable deployments.}
-        \resumeItem{Integrated SonarQube into the development pipeline, documented a step-by-step usage guide, presented findings to cross-functional teams, and resolved 3 critical bugs plus 308 code smells (4 blockers, 41 major, 266 info).}
-        \resumeItem{Developed a shell script to automatically clean up old logs every Sunday at 00:00 EST, which prevented clutter and improving system performance.}
-      \resumeItemListEnd
-    \resumeSubHeadingListEnd
+    {Software Developer Intern $|$ \normalfont Full-time}{Aug 2022 – Aug 2023}
+    {HCL Canada Inc.}{Toronto, ON, Canada}
+    \resumeItemListStart
+      \resumeItem{Automated build and deployment pipelines using Jenkins, accelerating production releases and minimizing manual errors by eliminating key bottlenecks in CI/CD}
+      \resumeItem{Containerized microservices for both x86\_64 (xLinux) and IBM PowerPC (pLinux) architectures, enabling architecture-agnostic builds and scalable, consistent deployments}
+      \resumeItem{Integrated SonarQube into the pipeline; documented a detailed usage guide, presented to cross-functional teams, and resolved 3 critical bugs and 308 code smells (including 4 blockers, 41 major issues)}
+      \resumeItem{Deployed a shell script to auto-clean legacy logs weekly (Sunday 00:00 EST), reducing disk clutter and improving system performance with zero manual intervention}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------Professional Services-----------
+\section{Professional Services}
+\resumeSubHeadingListStart
+  \item
+  \resumeItemListStart
+    \resumeItem{Mentor for Viterbi Graduate Mentorship Program (Fall 2025)}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
+
+%-----------AWARDS-----------
+\section{Awards \& Honors}
+\resumeSubHeadingListStart
+  \item
+  \resumeItemListStart
+    \resumeItem{Dean's List Scholar for 4 years (2020 - 2024)}
+    \resumeItem{Ranked in the top 25\% of contestants in the Galois Contest (2017)}
+    \resumeItem{Ranked in the top 25\% of contestants in the Cayley Contest (2017)}
+    \resumeItem{Ranked in the top 25\% of contestants in the Canadian Intermediate Mathematics (2016)}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
 
 %-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
- \begin{itemize}[leftmargin=0.0in, label={}]
-    \small{\item{
-     \textbf{Programming}{: C++, Python, JavaScript, HTML, CSS, MySQL} \\
-     \textbf{Graphics}{: OpenGL, GLSL, Eigen} \\
-     \textbf{ML}{: PyTorch} \\
-     \textbf{DevOps}{: Docker, Jenkins, Gradle, Ant, Shell} \\
-     \textbf{Languages}{: Mandarin (native), English (fluent)}
-    }
-    }
- \end{itemize}
+\resumeSubHeadingListStart
+  \item
+  \resumeItemListStart
+    \resumeItem{\textbf{Operating Systems}{: Linux, Windows, MacOS}}
+    \resumeItem{\textbf{Programming Languages}{: C++, Python, JavaScript, HTML, CSS, MySQL}}
+    \resumeItem{ \textbf{Graphics and Simulation}{: OpenGL, GLSL, Eigen, PyTorch}}
+    \resumeItem{\textbf{Tools and DevOps}{: Docker, Jenkins, Gradle, Ant, Shell, Git, Github Actions}}
+    \resumeItem{\textbf{Languages}{: Mandarin (native), English (fluent)}}
+  \resumeItemListEnd
+\resumeSubHeadingListEnd
 
+% \begin{itemize}[leftmargin=0.0in, label={}]
+%   \small{\item{
+%     \textbf{Operating Systems}{: Linux, Windows, MacOS} \\
+%     \textbf{Programming Languages}{: C++, Python, JavaScript, HTML, CSS, MySQL} \\
+%     \textbf{Graphics and Simulation}{: OpenGL, GLSL, Eigen, PyTorch} \\
+%     \textbf{Tools and DevOps}{: Docker, Jenkins, Gradle, Ant, Shell, Git, Github Actions} \\
+%     \textbf{Languages}{: Mandarin (native), English (fluent)}
+%     }
+%   }
+% \end{itemize}
 
 %-------------------------------------------
 

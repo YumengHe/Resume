@@ -2,3 +2,6 @@
 computer_graphics/*
 # except for the tex file
 !computer_graphics/resume-cg.tex
+
+# vscode
+.vscode/*
