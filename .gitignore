@@ -1,7 +1,8 @@
-# Ignore all files in the computer_graphics directory
-computer_graphics/*
-# except for the tex file
-!computer_graphics/resume-cg.tex
+# tex files
+*.aux
+*.log
+*.out
+*.synctex.gz
 
 # vscode
 .vscode/*

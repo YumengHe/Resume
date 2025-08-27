@@ -47,75 +47,46 @@
 % Sections formatting
 % 字体加粗: \bfseries
 \titleformat{\section}{
-  % \vspace{-4pt}
-  \bfseries\scshape\raggedright\large
-}{}{0em}{\MakeUppercase}[\color{black}\titlerule 
-% \vspace{-5pt}
-]
-
-% section标题：左缩进，标题前距，标题后距
-\titlespacing*{\section}{0pt}{12pt}{5pt}
+  \vspace{-4pt}\bfseries\scshape\raggedright\large
+}{}{0em}{\MakeUppercase}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
-\setlist[itemize]{topsep=0pt, itemsep=0pt, parsep=0pt, partopsep=0pt}
+
 %-------------------------
 % Custom commands
 \newcommand{\resumeItem}[1]{
   \item\small{
-    {#1 
-    % \vspace{-2pt}
-    }
+    {#1 \vspace{-2pt}}
   }
 }
 
 \newcommand{\resumePublications}[2]{
   \item[\small{[#1]}]\small{
-    {#2 
-    % \vspace{-2pt}
-    }
+    {#2 \vspace{-2pt}}
   }
 }
 
 \newcommand{\resumeSubheading}[4]{
-  \ifFirstSubheading
-    \global\FirstSubheadingfalse
-  \else
-    \addvspace{4pt}
-  \fi
-  \item
+  \vspace{-2pt}\item
     \begin{tabularx}{\textwidth}[t]{X r}
       \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
-    \end{tabularx}
+    \end{tabularx}\vspace{-7pt}
 }
 
 \newcommand{\resumePoint}[2]{
   \item
-    {\begingroup\renewcommand{\arraystretch}{0.8}%
-    \begin{tabularx}{\linewidth}[t]{@{}X r@{}}
+    \begin{tabularx}{\linewidth}[t]{X r}
       \small{#1} & \small{#2} \\
-    \end{tabularx}%
-    \endgroup}
+    \end{tabularx}\vspace{-2pt}
 }
 
-% \newcommand{\resumePoint}[2]{
-%   \item
-%     \begin{tabularx}{\linewidth}[t]{X r}
-%       \small{#1} & \small{#2} \\
-%     \end{tabularx}
-% }
-
 \newcommand{\resumeProjectHeading}[2]{
-  \ifFirstSubheading
-    \global\FirstSubheadingfalse
-  \else
-    \addvspace{4pt}
-  \fi
-  \item
-  \begin{tabularx}{\textwidth}[t]{X r}
-      \textbf{#1} & #2 \\
-  \end{tabularx}
+    \item
+    \begin{tabularx}{\textwidth}[t]{X r}
+        \textbf{#1} & #2 \\
+    \end{tabularx}\vspace{-7pt}
 }
 
 % \newcommand{\resumeProjectHeading}[2]{
@@ -127,13 +98,10 @@
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-% Flag to detect first subheading within a subheading list
-\newif\ifFirstSubheading
-
-\newcommand{\resumeSubHeadingListStart}{\global\FirstSubheadingtrue\begin{itemize}[leftmargin=0in, label={}]} 
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
 
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -155,16 +123,14 @@
 \end{center}
 
 %-----------RESEARCH INTERESTS-----------
-% \section{Research Interests}
-% \small
-% My research interests lie in computer graphics and vision,
-% especially in 
-% 2D and 3D generative models, 
-% physics-based simulation, 
-% geometry processing,
-% rendering,
-% and 3D Gaussian Splatting.
-% \vspace{-2pt}
+\section{Research Interests}
+My research interests lie in computer graphics and vision especially in 
+2D and 3D generative models, 
+physics-based simulation, 
+geometry processing,
+rendering,
+and 3D Gaussian Splatting.
+\vspace{-2pt}
 
 %-----------EDUCATION-----------
 \section{Education}
@@ -189,21 +155,14 @@
   \resumeSubHeadingListStart
     \item
     \resumeItemListStart
-      \resumePoint{Zhenlian Miao, Guangzhu Chen, Xiaojuan Liao, Jiu Dai, \textbf{Yumeng He}. \textit{Self-supervised dual-layer 2D normalizing flow method for industrial anomaly detection}. Applied Soft Computing (ASOC), 2024.}{}
+      \resumeItem{Zhenlian Miao, Guangzhu Chen, Xiaojuan Liao, Jiu Dai, \textbf{Yumeng He}. Self-supervised dual-layer 2D normalizing flow method for industrial anomaly detection. Applied Soft Computing (ASOC), 2024.}
     \resumeItemListEnd
   \resumeSubHeadingListEnd
-  % \vspace{2pt}
+
 %-----------Research Experience-----------
 \section{Research Experience}
-\resumeSubHeadingListStart
-  \resumeSubheading{USC RESL Lab Research Assistant $|$ \normalfont Part-time}
-                   {July 2025 – present}
-                   {Supervisor: Prof. Gaurav S. Sukhatme}
-                   {Los Angeles, CA, USA}
-  \resumeItemListStart
-    \resumeItem{Ledding the Real2Sim pipeline for a robotic manipulation project, focusing on building a digital twin from a single RGB-D image of a cluttered tabletop scene—including object segmentation, mesh generation, and estimation of pose, scale, and placement—and importing the reconstructed scene into ManiSkill3 for simulation}
-  \resumeItemListEnd
 
+\resumeSubHeadingListStart
   \resumeSubheading
   {UCLA AIVC Lab Visiting Student $|$ \normalfont Full-time}{June 2025 – present}
   {Supervisor: Prof. Chenfanfu Jiang}{Los Angeles, CA, USA}
@@ -214,15 +173,21 @@
   \resumeItemListEnd
 
   \resumeSubheading
-  {CDUT Research Assistant $|$ \normalfont Full-time}{May 2023 - Aug 2023}
-  {Supervisor: Prof. Guangzhu Chen}{Remote}
+  {USC RESL Lab Research Assistant $|$ \normalfont Part-time}{July 2025 – present}
+  {Supervisor: Prof. Gaurav S. Sukhatme}{Los Angeles, CA, USA}
   \resumeItemListStart
-    % \resumeItem{Proposed SS-Dualflow strategy to incorporate features from both normal and artificially generated abnormal samples into the Deep Learning Dual-Layer 2D Normalizing Flow network (Dualflow). }
-    % \resumeItem{Mapped features generated from the network to a Gaussian distribution, reducing information loss in the mapping process and bolstering the network’s capacity to comprehend common features in normal regions. }
-    % \resumeItem{Integration of the Exponential Space Attention Module into the inner subnetwork of Dualflow enabled the network to prioritize and distinguish anomalous features more effectively.}
-    % \resumeItem{The extended experimental outcomes on the MVTec AD dataset showcased an average image-level AUC of 99.38\% and an average pixel-level AUC of 98.38\%, demonstrating the approach's effectiveness.}
-    \resumeItem{Faced with unlabeled industrial defects on MVTec AD and tasked to raise unsupervised detection/localization accuracy, proposed SS-DualFlow: a dual-layer 2D normalizing-flow that maps features to a Gaussian base to curb information loss and inserts an Exponential Space Attention module to focus on anomaly-salient regions. Result: image-level AUROC = 99.38\% and pixel-level AUROC = 98.38\% on MVTec AD; co-authored the Applied Soft Computing (2024) paper.}
+    \resumeItem{Ledding the Real2Sim pipeline for a robotic manipulation project, focusing on building a digital twin from a single RGB-D image of a cluttered tabletop scene—including object segmentation, mesh generation, and estimation of pose, scale, and placement—and importing the reconstructed scene into ManiSkill3 for simulation}
   \resumeItemListEnd
+
+  % \resumeSubheading
+  % {Undergraduate Research Assistant $|$ \normalfont full-time}{May 2023 - August 2023}
+  % {Supervisor: Prof. Guangzhu Chen}{Remote}
+  % \resumeItemListStart
+  %   \resumeItem{Proposed SS-Dualflow strategy to incorporate features from both normal and artificially generated abnormal samples into the Deep Learning Dual-Layer 2D Normalizing Flow network (Dualflow). }
+  %   \resumeItem{Mapped features generated from the network to a Gaussian distribution, reducing information loss in the mapping process and bolstering the network’s capacity to comprehend common features in normal regions. }
+  %   \resumeItem{Integration of the Exponential Space Attention Module into the inner subnetwork of Dualflow enabled the network to prioritize and distinguish anomalous features more effectively.}
+  %   \resumeItem{The extended experimental outcomes on the MVTec AD dataset showcased an average image-level AUC of 99.38\% and an average pixel-level AUC of 98.38\%, demonstrating the approach's effectiveness.}
+  % \resumeItemListEnd
 \resumeSubHeadingListEnd
 
 %-----------PROJECTS-----------
@@ -231,10 +196,9 @@
   % Fluid Simulation
   \resumeProjectHeading {\textbf{Incompressible Fluid Simulation: A Comparison} $|$ \normalfont C++, OpenGL}{Spring 2025}
   \resumeItemListStart
-    \resumeItem{Implemented and benchmarked four 2D incompressible fluid solvers, including Stable Fluids, Smoothed Particle Hydrodynamics (SPH) , Particle In Cell (PIC) and Affine Particle In Cell (APIC) on identical scenarios, reporting performance-vs-accuracy trade-offs.}
-    % \resumeItem{Designed and implemented four 2D incompressible fluid solvers—Stable Fluids, SPH, PIC, and APIC—from scratch in C++ with OpenGL-based real-time visualization}
-    % \resumeItem{Ran controlled experiments on identical test scenarios to evaluate visual accuracy, physical stability, and runtime performance}
-    % \resumeItem{Identified trade-offs between solver fidelity and speed; APIC achieved the most stable and detailed flows, while Stable Fluids offered the fastest performance with noticeable dissipation}
+    \resumeItem{Designed and implemented four 2D incompressible fluid solvers—Stable Fluids, SPH, PIC, and APIC—from scratch in C++ with OpenGL-based real-time visualization}
+    \resumeItem{Ran controlled experiments on identical test scenarios to evaluate visual accuracy, physical stability, and runtime performance}
+    \resumeItem{Identified trade-offs between solver fidelity and speed; APIC achieved the most stable and detailed flows, while Stable Fluids offered the fastest performance with noticeable dissipation}
   \resumeItemListEnd
   
   % Collision Detection
@@ -244,7 +208,8 @@
       \resumeItem{Implemented penalty-based collision detection to handle interactions with static obstacles—including inclined planes and spheres—ensuring realistic response under contact}
       \resumeItem{Upgraded basic collision logic with Incremental Potential Contact (IPC), reducing interpenetration to below $1e - 4$ relative gap across $1,000+$ simulation steps, effectively achieving zero visible penetration and stable behavior}
   \resumeItemListEnd
-\newpage
+
+  % \newpage
   % Inverse Kinematics with Skinning
   \resumeProjectHeading {\textbf{Inverse Kinematics with Skinning} $|$ \normalfont C++}{Spring 2025}
   \resumeItemListStart
@@ -256,11 +221,9 @@
   % Motion Capture Interpolation
   \resumeProjectHeading {\textbf{Motion Capture Interpolation} $|$ \normalfont C++}{Spring 2025}
   \resumeItemListStart
-    \resumeItem{Implemented four interpolation schemes (incl. linear \& Bézier) with both Euler- and quaternion-based rotations to reconstruct and smooth optical mocap, mitigating gimbal lock and interpolation artifacts}
-    \resumeItem{Generated natural, continuous transitions across keyframes for high-dimensional skeletal animation}
-      % \resumeItem{Implemented four interpolation schemes to reconstruct and smooth human motion sequences captured via optical motion capture}
-      % \resumeItem{Supported both Euler angles and quaternions for representing joint rotations, enabling robust handling of gimbal lock and interpolation artifacts}
-      % \resumeItem{Applied linear and Bezier interpolation across keyframes to generate natural, continuous transitions in high-dimensional skeletal animation}
+      \resumeItem{Implemented four interpolation schemes to reconstruct and smooth human motion sequences captured via optical motion capture}
+      \resumeItem{Supported both Euler angles and quaternions for representing joint rotations, enabling robust handling of gimbal lock and interpolation artifacts}
+      \resumeItem{Applied linear and Bezier interpolation across keyframes to generate natural, continuous transitions in high-dimensional skeletal animation}
   \resumeItemListEnd
 
   % Ray Tracing
@@ -275,10 +238,9 @@
   \resumeProjectHeading
       {\textbf{Simulating a Roller Coaster} $|$ \normalfont OpenGL, Rendering}{Fall 2024}
       \resumeItemListStart
-        \resumeItem{Built a first-person roller-coaster sim with Catmull–Rom spline tracks and a Frenet-frame on-rail camera; added speed control, auto-screenshots, and seamless segment transitions.}
-          % \resumeItem{Built a first-person roller coaster simulator using Catmull–Rom splines for smooth track generation and the Frenet frame for real-time camera orientation}
-          % \resumeItem{Engineered a multi-pass OpenGL rendering pipeline sustaining 120 FPS at 1080p, with realistic motion and responsive controls}
-          % \resumeItem{Added interactive features including user-controlled speed, auto-screenshot capture, and seamless on-rail camera transitions}
+          \resumeItem{Built a first-person roller coaster simulator using Catmull–Rom splines for smooth track generation and the Frenet frame for real-time camera orientation}
+          \resumeItem{Engineered a multi-pass OpenGL rendering pipeline sustaining 120 FPS at 1080p, with realistic motion and responsive controls}
+          \resumeItem{Added interactive features including user-controlled speed, auto-screenshot capture, and seamless on-rail camera transitions}
       \resumeItemListEnd
   
   % Height Fields Using Shaders
@@ -314,27 +276,12 @@
     \resumeItemListEnd
   \resumeSubHeadingListEnd
 
-%-----------Community Services-----------
-\section{Community Services}
+%-----------Professional Services-----------
+\section{Professional Services}
 \resumeSubHeadingListStart
   \item
   \resumeItemListStart
-    \resumePoint{Mentor for Viterbi Graduate Mentorship Program}
-                {Fall 2025}
-    \resumePoint{Mentor for Women in Engineering Mentorship}
-                {Fall 2025}
-    \resumePoint{Mentor for Viterbi Graduate Mentorship Program}
-    {Summer 2025}
-  \resumeItemListEnd
-\resumeSubHeadingListEnd
-
-%-----------Invited Talks-----------
-\section{Invited Talks}
-\resumeSubHeadingListStart
-  \item
-  \resumeItemListStart
-    \resumePoint{\textit{MPC Is All You Need}. [Co-presented]. USC SLURM Lab, hosted by Prof. Daniel Seita}
-                {Aug 2025}
+    \resumePoint{Mentor for Viterbi Graduate Mentorship Program (Fall 2025)}{Fall 2025}
   \resumeItemListEnd
 \resumeSubHeadingListEnd
 
@@ -343,26 +290,24 @@
 \resumeSubHeadingListStart
   \item 
   \resumeItemListStart
-    \resumePoint{Dean's List Scholar}
-                {2020 - 2024}
-    \resumePoint{Ranked in the top 25\% of contestants in the Galois Contest}
-                {2017}
-    \resumePoint{Ranked in the top 25\% of contestants in the Cayley Contest}
-                {2017}
-    \resumePoint{Ranked in the top 25\% of contestants in the Canadian Intermediate Mathematics}
-                {2016}
+    \resumePoint{Dean's List Scholar for 4 years (2020 - 2024)}{2020 - 2024}
+    \resumePoint{Ranked in the top 25\% of contestants in the Galois Contest (2017)}{2017}
+    \resumePoint{Ranked in the top 25\% of contestants in the Cayley Contest (2017)}{2017}
+    \resumePoint{Ranked in the top 25\% of contestants in the Canadian Intermediate Mathematics (2016)}{2016}
+    \resumePoint{2019-2020, 2020-2021, 2021-2022 Scholarship for Pilotage (CHU KOCHEN Honors College Outstanding)}{2019-2022}
   \resumeItemListEnd
 \resumeSubHeadingListEnd
 
-%-----------Technical SKILLS-----------
+%-----------PROGRAMMING SKILLS-----------
 \section{Technical Skills}
 \resumeSubHeadingListStart
   \item
   \resumeItemListStart
-    \resumePoint{\textbf{Operating Systems}{: Linux, Windows, MacOS}}{}
-    \resumePoint{\textbf{Languages}{: Mandarine, English, C++, Python, HTML, CSS, JavaScript, MySQL, R}}{}
-    \resumePoint{ \textbf{Graphics and Simulation}{: OpenGL, GLSL, Eigen, PyTorch}}{}
-    \resumePoint{\textbf{Tools and DevOps}{: Docker, Jenkins, Gradle, Ant, Shell, Git, Github Actions}}{}
+    \resumeItem{\textbf{Operating Systems}{: Linux, Windows, MacOS}}
+    \resumeItem{\textbf{Programming Languages}{: C++, Python, JavaScript, HTML, CSS, MySQL}}
+    \resumeItem{ \textbf{Graphics and Simulation}{: OpenGL, GLSL, Eigen, PyTorch}}
+    \resumeItem{\textbf{Tools and DevOps}{: Docker, Jenkins, Gradle, Ant, Shell, Git, Github Actions}}
+    \resumeItem{\textbf{Languages}{: Mandarin (native), English (fluent)}}
   \resumeItemListEnd
 \resumeSubHeadingListEnd
 
@@ -376,6 +321,7 @@
 %     }
 %   }
 % \end{itemize}
+
 %-------------------------------------------
 
 \end{document}

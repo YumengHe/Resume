@@ -1,0 +1,192 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[includeheadfoot,margin=0.8in,top=0.4in,bottom=0.2in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{lastpage}
+\usepackage{mathpazo}
+\usepackage{setspace}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textbf{Yumeng He}}
+\fancyhead[R]{\small Web: \href{https://heyumeng.com}{heyumeng.com} \quad Email: \href{mailto:heyumeng0928@gmail.com}{heyumeng0928@gmail.com}}
+\renewcommand{\headrulewidth}{0.2pt}
+\setlength{\headheight}{16pt}
+\setlength{\headsep}{6pt}
+\fancyfoot[C]{\small Page \thepage\ of \pageref{LastPage}}
+\setlength{\footskip}{18pt}
+
+% Slightly increase line spacing across the document
+\setstretch{1.0}
+
+% Add slight space between paragraphs (adjust here)
+\setlength{\parskip}{0.3em}
+
+\begin{document}
+
+\vspace*{-18pt}
+\begingroup
+\centering
+\Large\bfseries Personal Statement \par
+\endgroup
+% \vspace{6pt}
+
+% Introduction
+How might today's technology let families who live apart feel truly together?
+And beyond lifelike visuals, what would it take to create digital twins of
+people, objects, and scenes that not only look right but also act right under
+touch, motion, and control? Inspired by these questions, my research focuses on
+computer graphics and vision with a primary emphasis on physically based
+simulation. By making high-fidelity digital twins easier to create and reliable to use, I
+hope to bring presence, learning, and care a little closer to daily life. It is
+with these goals in mind that I am applying to pursue a PhD in Computer Science
+at the USC Viterbi School of Engineering.
+
+\textbf{Finding My Research Interests.} 
+I spent real time asking myself two simple questions that many others asked me as well: ''What do
+you want to do?'' and ''What are your interests?'' I first met these questions
+years ago at the University of Toronto, where majors are chosen after the first
+year. I explored widely --- economics, statistics, astronomy --- before
+realizing that mathematics and computer science best match how I think and what
+I want to build. That dual training still anchors me today: math gives me
+structure in optimization, numerics, geometry, and CS gives me the systems
+instincts to turn ideas into tools.
+
+When I entered graduate study, I made a choice to narrow my focus and
+bring rigorous code together with aesthetics and interaction through graphics
+and vision. During my master's at University of Southern
+California, I pursued that curiosity deliberately across computer graphics: CSCI
+420 Computer Graphics, CSCI 520 Computer Animation and Simulation, and CSCI 580
+3D Graphics and Rendering. I didn't just enjoy these courses; I excelled in them
+--- finishing at the very top of the class --- and, more importantly, learned
+how theoretical choices such as discretizations, time integration, conditioning
+surface as practical tradeoffs in real code. That experience clarified my
+research identity: I want to develop robust, high-fidelity physically based
+simulation methods for deformable and articulated objects, so that virtual
+worlds behave as convincingly as they look.
+
+\textbf{Research in Computer Graphics.}
+My research experiences at UCLA's AIVC Lab made this direction concrete. I
+worked on 3D object generation with articulated parts and saw a
+clear gap between visual realism and practical use. Many systems stop at
+surfaces and textures, yet artists and downstream applications need models whose
+parts are controllable and whose articulation can be expressed as valid URDF
+rather than arbitrary segmentation. I led the end-to-end pipeline. I began with
+disciplined surveying and triage, reading closely when a paper seemed near our
+idea, decomposing its pipeline, mapping each step against ours, and separating
+surface resemblance from true overlap. I then moved quickly from thought
+experiments to working prototypes, authoring minimal URDFs from scratch,
+transferring URDFs across related objects to test articulation assumptions, and
+scaling from toy scripts to a full diffusion-transformer pipeline. I
+experimented with lightweight adaptation such as LoRA and structure-aware
+conditioning in the spirit of ControlNet, and I defined measurable criteria for
+success: no self-intersection at joints under motion, consistent joint limits
+under actuation, stable contact, and meshes and textures that do not destabilize
+downstream use. Because I was trained as a software engineer during a year-long
+co-op, I wrote modular, documented, and tested code so others could reproduce
+and extend our results. This phase taught me that visual plausibility only
+matters when the asset also behaves correctly under physics.
+
+As a lighthearted aside, our project had a plot twist.
+We initially set out to pursue 3D scene generation with articulated objects, but
+the literature review and hands-on replication showed that articulated-object
+generation itself was not yet mature enough for our goals. Many promising models
+were not fully open source, and several open releases produced artifacts such as
+broken topology, unstable rigging, and unreliable UVs that would not survive
+downstream use. We decided to narrow the scope deliberately: first solve robust
+articulated asset generation and reliable URDF translation, then return to full
+scene generation. That pivot taught me how research differs from course projects.
+There is no fixed instruction set, only open ideas that must be scoped,
+stress-tested, and refined from zero to one. I learned how to select a tractable
+entry point, design feasibility checks and ablations that reveal failure modes
+early, and use those signals to steer the next iteration.
+
+\textbf{Research in Robotics.}
+In my second year of the master's program, I joined the Robotic Embedded
+Systems Laboratory at USC to help design a real-to-sim pipeline for tabletop
+scenes. Starting from RGB-D with known intrinsics and extrinsics, we segmented
+objects, reconstructed meshes, estimated pose and scale, and imported assets
+into simulation for manipulation tasks. I still remember the lab interview:
+unlike earlier interviews where I mostly recited course knowledge, this time I
+could truly speak pipeline --- we sketched failure modes and tradeoffs on the
+spot. Drawing on prior hands-on testing, I proposed using SAM for segmentation
+and Trellis for mesh reconstruction rather than building meshes from camera
+point clouds, which often produce artificial artifacts and low-quality surfaces.
+I also explained why we would not adopt several competing models at that stage
+and compared options such as TripoSG and Hunyuan3D, clarifying the tradeoffs for
+our use case. More importantly, we discussed how simulation validates grasp
+feasibility and how contact, friction, and restitution parameters influence
+downstream success. That moment convinced me research is the right long-term
+path. Those conversations turned simulation from a classroom topic into a
+decision-making tool for building robust systems.
+
+\textbf{STEM Outreach.} 
+I am committed to doing work that is useful to others. In graduate school, that
+means pursuing open projects that matter rather than producing results that live
+only on paper. I open-source my code and notes, write clear how-to guides, and
+maintain checklists for reproducibility and fair baselines. To date I have
+released seventeen projects. Each time a stranger stars a repository, I feel
+encouraged not for the number itself but for the signal that someone, somewhere,
+was able to build on what I made. My aim is simple and consistent with the
+vision of trustworthy digital twins: tools that other people can run, reuse, and
+extend.
+
+Mentorship is the other strand of this commitment. Each year I volunteer as a
+mentor, I have applied to USC's Graduate Student Mentorship and
+Women in Engineering Mentorship programs to support incoming and junior students.
+I still remember the first time a mentee asked what I wished I had known when I first enrolled,
+it felt like speaking to my younger self. I answer candidly and
+specifically---how to choose courses and find a research home, how to approach
+faculty, how to set up reproducible environments and manage workloads---so that
+others can avoid avoidable detours. For me, open code and open counsel are two
+ways of serving the same goal: lowering the barrier for others to participate,
+and building a community that turns principled ideas into working systems.
+
+\textbf{Future Work.} \textbf{!!!!!! Need to rewrite this part !!!!!}
+My decision to pursue a PhD at USC grows directly from Professor Jernej
+Barbič's course in physically based simulation, which crystallized the kind of
+problems I want to work on and showed me how careful modeling and numerics make
+systems dependable. USC is where my preparation, interests, and mentorship fit
+best. USC is uniquely compelling because it lets me pursue physically based
+simulation with Professor Jernej Barbič, while also connecting to adjacent
+groups that strengthen perception and generation such as Professor Yue Wang and
+Professor Yajie Zhao. With Professor Barbič, I want to advance robust and
+efficient simulation that respects contact, friction, joint limits, and
+stability, and that can be differentiable when needed for estimation and control.
+My UCLA experience taught me that some goals cannot be achieved by neural
+networks alone without introducing artifacts; assets that appear watertight yet
+are physically implausible still interpenetrate or violate constraints. I am
+particularly interested in collision handling that guarantees non-penetration at
+practical time steps and in coupling deformable and articulated dynamics under
+real-world actuation. With Professor Yue Wang and Professor Yajie Zhao, I see
+opportunities to connect perception, segmentation, and three-dimensional
+understanding to simulation-in-the-loop pipelines so that estimated structure
+and materials are verified and refined by physics rather than left as purely
+visual outputs.
+
+I hope to contribute to the Viterbi community beyond papers: reproducible
+codebases, internal tooling others can build on, reading groups that bridge
+graphics, vision, and robotics, and mentorship that emphasizes research hygiene
+and honest ablations. I also bring a perspective shaped by both analytical rigor
+and design sensibilities: I care about how objects look, move, and feel --- from
+numerical stability to the quiet correctness of a door that never clips through
+its frame.
+
+\textbf{Where I See Myself.} 
+I left home in middle school to study abroad, often going long stretches without
+seeing my family. In a traditional household where feelings are seldom spoken,
+distance felt larger than miles. That experience shapes my motivation: to make
+presence travel better, and to turn digital twins from a novelty into something
+that helps people feel together.
+
+My five-year undergraduate path included a full-year co-op that taught me to
+ship reliable software. I enjoy coding, and I value research that others can run,
+reuse, and extend. I want my work to be used, not only cited. After the PhD, I
+hope to work in a research lab building systems that bridge simulation and
+perception, releasing tools the community finds as practical as they are
+principled. Furthering my education at USC would bring me a step closer to that
+goal by accelerating the science and engineering needed to make trustworthy
+digital twins part of everyday life.
+
+\end{document}
+
