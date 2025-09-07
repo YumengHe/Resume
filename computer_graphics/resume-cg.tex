@@ -196,10 +196,17 @@
 %-----------Research Experience-----------
 \section{Research Experience}
 \resumeSubHeadingListStart
+  \resumeSubheading{USC Graphics $|$ \normalfont Master Thesis}
+                   {Aug 2025 – present}
+                   {Supervisor: Prof. Jernej Barbič}
+                   {Los Angeles, CA, USA}
+  % \resumeItemListStart
+  % \resumeItemListEnd
+
   \resumeSubheading{UCLA AIVC Lab $|$ \normalfont Visiting student}
-  {June 2025 – present}
-  {Supervisor: Prof. Chenfanfu Jiang}
-  {Los Angeles, CA, USA}
+                   {June 2025 – present}
+                   {Supervisor: Prof. Chenfanfu Jiang}
+                   {Los Angeles, CA, USA}
   \resumeItemListStart
   \resumeItem{Conducting full-time research on 3D articulated object generation, with a focus on neural representations of shape and joint dynamics for physically plausible synthesis}
   \resumeItem{Exploring physics-aware scene layout and hierarchical composition, combining structural priors with simulation constraints to guide object placement}
@@ -207,7 +214,7 @@
   \resumeItemListEnd
 
   \resumeSubheading{USC RESL Lab $|$ \normalfont Research Assistant}
-                   {July 2025 – present}
+                   {Jul 2025 – present}
                    {Supervisor: Prof. Gaurav S. Sukhatme}
                    {Los Angeles, CA, USA}
   \resumeItemListStart
@@ -240,48 +247,51 @@
   \resumeItemListEnd
   
   % Collision Detection
-  \resumeProjectHeading {\textbf{Collision Detection with Penalty Method and IPC} $|$ \normalfont C++}{Spring 2025}
+  \resumeProjectHeading{\textbf{Collision Detection with Penalty Method and IPC} $|$ \normalfont C++}{Spring 2025}
   \resumeItemListStart
-      \resumeItem{Built a physically accurate 3D jello cube simulator using a mass-spring system with structural, shear, and bend springs to model real-world deformation under force}
-      \resumeItem{Implemented penalty-based collision detection to handle interactions with static obstacles—including inclined planes and spheres—ensuring realistic response under contact}
-      \resumeItem{Upgraded basic collision logic with Incremental Potential Contact (IPC), reducing interpenetration to below $1e - 4$ relative gap across $1,000+$ simulation steps, effectively achieving zero visible penetration and stable behavior}
+    \resumeItem{Built a physically accurate 3D jello cube simulator using a mass-spring system with structural, shear, and bend springs to model real-world deformation under force}
+    \resumeItem{Implemented penalty-based collision detection to handle interactions with static obstacles, including inclined planes and spheres, ensuring realistic response under contact}
+    \resumeItem{Upgraded basic collision logic with Incremental Potential Contact (IPC), reducing interpenetration to below $1e - 4$ relative gap across $1,000+$ simulation steps, effectively achieving zero visible penetration and stable behavior}
   \resumeItemListEnd
-\newpage
+% \newpage
   % Inverse Kinematics with Skinning
-  \resumeProjectHeading {\textbf{Inverse Kinematics with Skinning} $|$ \normalfont C++}{Spring 2025}
+  \resumeProjectHeading{\textbf{Inverse Kinematics with Skinning} $|$ \normalfont C++}{Spring 2025}
   \resumeItemListStart
-      \resumeItem{Implemented Linear Blend Skinning and Dual Quaternion Skinning to deform 3D characters with smooth and realistic joint articulation}
-      \resumeItem{Built a full FK–IK pipeline, supporting both forward kinematics for pose propagation and inverse kinematics for pose estimation under joint constraints}
-      \resumeItem{Developed multiple IK solvers, including the pseudoinverse method (least squares) and Tikhonov regularization (damped least squares) to improve stability}
+    \resumeItem{Implemented Linear Blend Skinning and Dual Quaternion Skinning to deform 3D characters with smooth and realistic joint articulation}
+    \resumeItem{Built a full FK–IK pipeline, supporting both forward kinematics for pose propagation and inverse kinematics for pose estimation under joint constraints}
+    \resumeItem{Developed multiple IK solvers, including the pseudoinverse method (least squares) and Tikhonov regularization (damped least squares) to improve stability}
   \resumeItemListEnd
 
   % Motion Capture Interpolation
-  \resumeProjectHeading {\textbf{Motion Capture Interpolation} $|$ \normalfont C++}{Spring 2025}
+  \resumeProjectHeading{\textbf{Motion Capture Interpolation} $|$ \normalfont C++}{Spring 2025}
   \resumeItemListStart
     \resumeItem{Implemented four interpolation schemes (incl. linear \& Bézier) with both Euler- and quaternion-based rotations to reconstruct and smooth optical mocap, mitigating gimbal lock and interpolation artifacts}
     \resumeItem{Generated natural, continuous transitions across keyframes for high-dimensional skeletal animation}
-      % \resumeItem{Implemented four interpolation schemes to reconstruct and smooth human motion sequences captured via optical motion capture}
-      % \resumeItem{Supported both Euler angles and quaternions for representing joint rotations, enabling robust handling of gimbal lock and interpolation artifacts}
-      % \resumeItem{Applied linear and Bezier interpolation across keyframes to generate natural, continuous transitions in high-dimensional skeletal animation}
+    % \resumeItem{Implemented four interpolation schemes to reconstruct and smooth human motion sequences captured via optical motion capture}
+    % \resumeItem{Supported both Euler angles and quaternions for representing joint rotations, enabling robust handling of gimbal lock and interpolation artifacts}
+    % \resumeItem{Applied linear and Bezier interpolation across keyframes to generate natural, continuous transitions in high-dimensional skeletal animation}
   \resumeItemListEnd
 
   % Ray Tracing
-  \resumeProjectHeading {\textbf{Ray Tracing} $|$ \normalfont C++, Rendering}{Fall 2024}
-      \resumeItemListStart
-          \resumeItem{Built a modular ray tracer in C++ supporting both triangle meshes and spheres, featuring Phong shading, shadow rays, and recursive reflections for realistic mirror effects}
-          \resumeItem{Integrated supersampling antialiasing, soft shadows via area lights, and the Moller–Trumbore algorithm for fast ray–triangle intersections}
-          \resumeItem{Achieved visually convincing renders with enhanced realism and performance, balancing image quality and computational cost across complex scenes}
-      \resumeItemListEnd
+  \resumeProjectHeading{\textbf{Ray Tracing} $|$ \normalfont C++, Rendering}
+                       {Fall 2024}
+    \resumeItemListStart
+      \resumeItem{Built a modular ray tracer with Phong shading, shadow rays, and recursive reflections, supporting both spheres and triangle meshes} 
+      \resumeItem{Added supersampling, soft shadows via area lights, and Möller–Trumbore intersection, achieving realistic visuals while balancing quality and performance}
+        % \resumeItem{Built a modular ray tracer in C++ supporting both triangle meshes and spheres, featuring Phong shading, shadow rays, and recursive reflections for realistic mirror effects}
+        % \resumeItem{Integrated supersampling antialiasing, soft shadows via area lights, and the Moller–Trumbore algorithm for fast ray–triangle intersections}
+        % \resumeItem{Achieved visually convincing renders with enhanced realism and performance, balancing image quality and computational cost across complex scenes}
+    \resumeItemListEnd
   
   % Roller Coaster
-  \resumeProjectHeading
-      {\textbf{Simulating a Roller Coaster} $|$ \normalfont OpenGL, Rendering}{Fall 2024}
-      \resumeItemListStart
-        \resumeItem{Built a first-person roller-coaster sim with Catmull–Rom spline tracks and a Frenet-frame on-rail camera; added speed control, auto-screenshots, and seamless segment transitions.}
-          % \resumeItem{Built a first-person roller coaster simulator using Catmull–Rom splines for smooth track generation and the Frenet frame for real-time camera orientation}
-          % \resumeItem{Engineered a multi-pass OpenGL rendering pipeline sustaining 120 FPS at 1080p, with realistic motion and responsive controls}
-          % \resumeItem{Added interactive features including user-controlled speed, auto-screenshot capture, and seamless on-rail camera transitions}
-      \resumeItemListEnd
+  \resumeProjectHeading{\textbf{Simulating a Roller Coaster} $|$ \normalfont OpenGL, Rendering}
+                       {Fall 2024}
+    \resumeItemListStart
+      \resumeItem{Built a first-person roller-coaster sim with Catmull–Rom spline tracks and a Frenet-frame on-rail camera; added speed control, auto-screenshots, and seamless segment transitions.}
+        % \resumeItem{Built a first-person roller coaster simulator using Catmull–Rom splines for smooth track generation and the Frenet frame for real-time camera orientation}
+        % \resumeItem{Engineered a multi-pass OpenGL rendering pipeline sustaining 120 FPS at 1080p, with realistic motion and responsive controls}
+        % \resumeItem{Added interactive features including user-controlled speed, auto-screenshot capture, and seamless on-rail camera transitions}
+    \resumeItemListEnd
   
   % Height Fields Using Shaders
   % \resumeProjectHeading
